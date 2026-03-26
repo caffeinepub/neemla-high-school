@@ -104,6 +104,11 @@ const PHOTOS = [
     tag: "Awards",
   },
   {
+    src: "/assets/uploads/f21162b1-1d4f-4102-b27c-cdfc86acabf8-019d2a10-06e8-75cb-8199-c0ff0c643c73-1.jpeg",
+    caption: "School Annual Function — Students Assembly",
+    tag: "School Life",
+  },
+  {
     src: "/assets/uploads/8a7a46ee-2ac1-46b8-b3c8-52215e1b5a35-019d2a03-65d5-7242-92c7-03a5d5976aef-5.jpeg",
     caption: "Merit Award Ceremony — Honouring Excellence",
     tag: "Awards",
@@ -127,7 +132,6 @@ const CLASS_OPTIONS = [
 
 const NAV_LINKS = [
   { label: "Home", href: "#home" },
-  { label: "Videos", href: "#videos" },
   { label: "Gallery", href: "#gallery" },
   { label: "Why Us", href: "#why-us" },
   { label: "Enquiry", href: "#enquiry" },
@@ -391,42 +395,6 @@ export default function App() {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* ── VIDEO GALLERY ── */}
-        <section id="videos" className="py-16 bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6">
-            <motion.div
-              className="text-center mb-10"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              <h2 className="text-3xl sm:text-4xl font-bold text-deep-green font-display mb-3">
-                School Highlights
-              </h2>
-              <p className="text-muted-foreground max-w-xl mx-auto">
-                Watch our annual function and school events.
-              </p>
-            </motion.div>
-            <motion.div
-              className="rounded-2xl overflow-hidden shadow-lg"
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <video
-                src="/assets/uploads/89b9961d-7648-455e-a43b-9e48d0ca5bcb-019d2a03-71f2-75f1-be99-aac11f165844-1.mp4"
-                controls
-                className="w-full"
-                poster="/assets/uploads/c54571cf-0ef8-4172-9a8d-88fe88541e12-019d2a03-6451-765b-a777-4c5852f65e86-2.jpeg"
-              >
-                <track kind="captions" />
-              </video>
-            </motion.div>
           </div>
         </section>
 
