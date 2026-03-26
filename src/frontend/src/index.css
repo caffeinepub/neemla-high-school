@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.625rem;
+
+    /* Forest Green: #1a6b3c → oklch(~0.47 0.13 152) */
+    --forest: 0.47 0.13 152;
+    /* Deep Green: #0d4a29 → oklch(~0.35 0.11 152) */
+    --deep-green: 0.35 0.11 152;
+    /* Navy: #0f2d5e → oklch(~0.24 0.08 259) */
+    --navy: 0.24 0.08 259;
+    /* Gold: #d4a017 → oklch(~0.72 0.16 80) */
+    --gold: 0.72 0.16 80;
+    /* Light green tint: #e8f5ee → oklch(~0.95 0.03 152) */
+    --green-tint: 0.95 0.03 152;
+
+    --background: 0.99 0 0;
+    --foreground: 0.17 0.03 259;
+    --card: 1 0 0;
+    --card-foreground: 0.17 0.03 259;
+    --popover: 1 0 0;
+    --popover-foreground: 0.17 0.03 259;
+    --primary: 0.35 0.11 152;
+    --primary-foreground: 1 0 0;
+    --secondary: 0.72 0.16 80;
+    --secondary-foreground: 0.17 0 0;
+    --muted: 0.96 0.01 152;
+    --muted-foreground: 0.5 0.03 152;
+    --accent: 0.47 0.13 152;
+    --accent-foreground: 1 0 0;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.92 0.01 152;
+    --input: 0.92 0.01 152;
+    --ring: 0.47 0.13 152;
+    --chart-1: 0.47 0.13 152;
+    --chart-2: 0.35 0.11 152;
+    --chart-3: 0.72 0.16 80;
+    --chart-4: 0.24 0.08 259;
+    --chart-5: 0.6 0.1 152;
+    --sidebar: 0.985 0 0;
+    --sidebar-foreground: 0.145 0 0;
+    --sidebar-primary: 0.205 0 0;
+    --sidebar-primary-foreground: 0.985 0 0;
+    --sidebar-accent: 0.97 0 0;
+    --sidebar-accent-foreground: 0.205 0 0;
+    --sidebar-border: 0.922 0 0;
+    --sidebar-ring: 0.708 0 0;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+
+  .font-devanagari {
+    font-family: "Noto Sans Devanagari", sans-serif;
+  }
+
+  .font-display {
+    font-family: "DM Serif Display", serif;
+  }
+}
