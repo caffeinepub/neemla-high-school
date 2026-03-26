@@ -74,7 +74,7 @@ const WHY_CHOOSE = [
 
 const PHOTOS = [
   {
-    src: "/assets/uploads/img_1521-019d29f0-f840-71c2-af1a-94a31af880c3-1.jpeg",
+    src: "/assets/uploads/img_1490-019d2adf-7c99-745a-83b7-39f5dee2c373-2.jpeg",
     caption: "Students Outing & Group Activity",
     tag: "School Life",
   },
@@ -104,7 +104,7 @@ const PHOTOS = [
     tag: "Awards",
   },
   {
-    src: "/assets/uploads/f21162b1-1d4f-4102-b27c-cdfc86acabf8-019d2a10-06e8-75cb-8199-c0ff0c643c73-1.jpeg",
+    src: "/assets/uploads/49272f02-68c7-40a6-9e5c-59837f45df03-019d2adf-78c6-73ab-84e6-44a2aacb3d4b-1.jpeg",
     caption: "School Annual Function — Students Assembly",
     tag: "School Life",
   },
@@ -365,7 +365,7 @@ export default function App() {
                   className="inline-flex items-center gap-2 px-7 py-3 rounded-lg bg-gold text-gray-900 font-bold text-sm hover:brightness-105 transition-all shadow-lg"
                   data-ocid="hero.primary_button"
                 >
-                  Admissions Open 2025–26
+                  Admissions Open 2026–27
                 </a>
                 <a
                   href="#gallery"
@@ -418,7 +418,7 @@ export default function App() {
             </motion.div>
 
             <div
-              className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
               data-ocid="gallery.section"
             >
               {PHOTOS.map((photo, i) => (
@@ -431,11 +431,19 @@ export default function App() {
                   transition={{ duration: 0.5, delay: i * 0.08 }}
                   data-ocid={`gallery.item.${i + 1}`}
                 >
-                  <div className="aspect-[4/3] overflow-hidden">
+                  <div
+                    className="relative w-full"
+                    style={{ paddingBottom: "75%" }}
+                  >
                     <img
                       src={photo.src}
                       alt={photo.caption}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      onError={(e) => {
+                        (e.currentTarget as HTMLImageElement).style.display =
+                          "none";
+                      }}
                     />
                   </div>
                   <div className="p-4">
@@ -524,7 +532,7 @@ export default function App() {
                 className="text-white"
               >
                 <h2 className="text-3xl sm:text-4xl font-bold mb-3 font-display">
-                  Admissions Open
+                  Admissions Open 2026–27
                 </h2>
                 <p className="font-devanagari text-xl text-gold font-bold mb-6">
                   शिक्षा के साथ संस्कार भी
@@ -800,6 +808,12 @@ export default function App() {
                 School Info
               </h3>
               <ul className="space-y-2.5 text-sm text-white/70">
+                <li>
+                  <span className="text-white/40 text-xs uppercase tracking-wide block mb-0.5">
+                    Session
+                  </span>
+                  <span className="text-gold font-bold">2026–27</span>
+                </li>
                 <li>
                   <span className="text-white/40 text-xs uppercase tracking-wide block mb-0.5">
                     Principal
